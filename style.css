@@ -1,0 +1,95 @@
+/* reset css*/
+* {
+    min-width: 0;
+    font: inherit;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img, video, svg {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    min-width: 100dvh;
+}
+
+h1,
+h2,
+h3 {
+    text-wrap: balance;
+}
+p {
+    text-wrap: pretty;
+}
+
+/* starts here*/
+
+body {
+    background-color: bisque;
+    height: 100vh;
+    & main {
+        background-color: teal;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & h1 {
+            font-size: 2rem;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        & .options{
+            font-size: 1.5rems;
+            font-weight: 600;
+
+            & button{
+                padding: .5rem 1.5rem;
+                border: 1px solid rgba(0, 0, 0, .2);
+                border-radius: 5px;
+                cursor: pointer;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+            }
+
+            & button:hover {
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+            }
+            & button#yes {
+                background-color: limegreen;
+            }
+            & button#no {
+                background-color: tomato;
+            }
+        }
+
+    }
+}
+
+#message {
+    position: fixed;
+    background-color: turquoise;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*displey flex */
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    & h1{
+        font-size: 2.5rem;
+        text-align: center;
+        font-weight: 500;
+    }
+}
